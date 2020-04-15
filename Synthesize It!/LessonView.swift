@@ -13,6 +13,7 @@ struct LessonView : View{
     var wordBank: [String]
     var definitions: [String] = []
     var pictures: [Image] = []
+   
     
     var body : some View{
     
@@ -21,6 +22,7 @@ struct LessonView : View{
                 Color(red: 80/255, green: 204/255, blue: 189/255)
                 .edgesIgnoringSafeArea(.all)
                 
+                
                 VStack(alignment: .leading, spacing: 5){
                     Text("Words you need to know")
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,16 +30,24 @@ struct LessonView : View{
                     Spacer()
                 
                     GeometryReader{ g in
-                        VStack(spacing: 40){
-                            Button(self.getWords()){
-                                
+                        VStack(spacing: 20){
+                            HStack{
+                            ForEach(0..<self.wordBank.count/2, id: \.self){x in
+                                    Button(self.wordBank[x]){
+                                                                   
+                                                               }
+                                                               .frame(maxWidth: g.size.width/1.5)
+                                                               .font(.system(size: 20))
+                                }
                             }
-                            .frame(maxWidth: g.size.width/1.5)
-                            .multilineTextAlignment(.center)
-                            .font(.system(size: 20))
-                            .lineSpacing(20)
-                            .lineLimit(3)
-    
+                            HStack{
+                            ForEach(self.wordBank.count/2..<self.wordBank.count, id: \.self){x in
+                                Button(self.wordBank[x]){
+                                                                                            }
+                                                .frame(maxWidth: g.size.width/1.5)
+                                                .font(.system(size: 20))
+                                                           }
+                                                       }
                             if(self.index == nil){
                                 Text("What is \(self.wordBank[0])")
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,11 +59,10 @@ struct LessonView : View{
                                 .frame(width:200, height: 200)
                             }
                             Spacer()
+                            }
                         }
                     }
                     
-                    
-                }
             }
             .navigationBarTitle("Transcription")
             .navigationBarItems(trailing:
@@ -61,15 +70,6 @@ struct LessonView : View{
                     
                 }.padding())
         }
-        
-            
-    }
-    func getWords() -> String{
-        var result = ""
-        for x in self.wordBank{
-            result += x + " \t\t"
-        }
-        return result
     }
 }
 
@@ -77,6 +77,6 @@ struct LessonView : View{
 
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
-        LessonView(wordBank: ["DNA", "mRNA", "Introns", "Exons"],definitions: ["its the code", "", "", ""],pictures: [Image("CookBook")])
+        LessonView(wordBank: ["DNA", "mRNA", "Introns", "Exons"],definitions: ["its the key to Nastassja's heart", "", "", ""],pictures: [Image("CookBook")])
     }
 }
