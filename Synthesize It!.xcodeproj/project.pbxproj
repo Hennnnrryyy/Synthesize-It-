@@ -12,12 +12,18 @@
 		BA4427802446A89F00CB7B16 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44277F2446A89F00CB7B16 /* ViewRouter.swift */; };
 		BA4427822447B04400CB7B16 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4427812447B04400CB7B16 /* Badge.swift */; };
 		BA4427842447B07300CB7B16 /* HexagonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4427832447B07300CB7B16 /* HexagonParameters.swift */; };
+		BA4427862447C63700CB7B16 /* BasePairingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4427852447C63700CB7B16 /* BasePairingView.swift */; };
+		BA4427882447FCD000CB7B16 /* DNABasePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4427872447FCD000CB7B16 /* DNABasePair.swift */; };
+		BA44278A24481B1B00CB7B16 /* DNAStrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA44278924481B1B00CB7B16 /* DNAStrandView.swift */; };
 		BA7F48A024365D0900C1B3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F489F24365D0900C1B3F8 /* AppDelegate.swift */; };
 		BA7F48A224365D0900C1B3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F48A124365D0900C1B3F8 /* SceneDelegate.swift */; };
 		BA7F48A424365D0900C1B3F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7F48A324365D0900C1B3F8 /* ContentView.swift */; };
 		BA7F48A624365D0C00C1B3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7F48A524365D0C00C1B3F8 /* Assets.xcassets */; };
 		BA7F48A924365D0C00C1B3F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7F48A824365D0C00C1B3F8 /* Preview Assets.xcassets */; };
 		BA7F48AC24365D0C00C1B3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA7F48AA24365D0C00C1B3F8 /* LaunchScreen.storyboard */; };
+		BAA357242448F15700F615FE /* RNABasePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA357232448F15700F615FE /* RNABasePair.swift */; };
+		BAB395032448FB42001B4E16 /* RNAStrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB395022448FB42001B4E16 /* RNAStrandView.swift */; };
+		BAB3950524496671001B4E16 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3950424496671001B4E16 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,9 @@
 		BA44277F2446A89F00CB7B16 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		BA4427812447B04400CB7B16 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		BA4427832447B07300CB7B16 /* HexagonParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonParameters.swift; sourceTree = "<group>"; };
+		BA4427852447C63700CB7B16 /* BasePairingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePairingView.swift; sourceTree = "<group>"; };
+		BA4427872447FCD000CB7B16 /* DNABasePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNABasePair.swift; sourceTree = "<group>"; };
+		BA44278924481B1B00CB7B16 /* DNAStrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNAStrandView.swift; sourceTree = "<group>"; };
 		BA7F489C24365D0900C1B3F8 /* Synthesize It!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Synthesize It!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7F489F24365D0900C1B3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA7F48A124365D0900C1B3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +43,9 @@
 		BA7F48A824365D0C00C1B3F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA7F48AB24365D0C00C1B3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA7F48AD24365D0C00C1B3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAA357232448F15700F615FE /* RNABasePair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNABasePair.swift; sourceTree = "<group>"; };
+		BAB395022448FB42001B4E16 /* RNAStrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNAStrandView.swift; sourceTree = "<group>"; };
+		BAB3950424496671001B4E16 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +78,17 @@
 		BA7F489E24365D0900C1B3F8 /* Synthesize It! */ = {
 			isa = PBXGroup;
 			children = (
+				BA4427872447FCD000CB7B16 /* DNABasePair.swift */,
+				BAA357232448F15700F615FE /* RNABasePair.swift */,
+				BA44278924481B1B00CB7B16 /* DNAStrandView.swift */,
+				BAB395022448FB42001B4E16 /* RNAStrandView.swift */,
 				BA7F489F24365D0900C1B3F8 /* AppDelegate.swift */,
 				BA7F48A124365D0900C1B3F8 /* SceneDelegate.swift */,
 				BA7F48A324365D0900C1B3F8 /* ContentView.swift */,
 				BA44277D2446327500CB7B16 /* LessonView.swift */,
+				BAB3950424496671001B4E16 /* AboutView.swift */,
 				BA44277B24457F9300CB7B16 /* MotherView.swift */,
+				BA4427852447C63700CB7B16 /* BasePairingView.swift */,
 				BA4427812447B04400CB7B16 /* Badge.swift */,
 				BA4427832447B07300CB7B16 /* HexagonParameters.swift */,
 				BA44277F2446A89F00CB7B16 /* ViewRouter.swift */,
@@ -160,13 +178,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA44278A24481B1B00CB7B16 /* DNAStrandView.swift in Sources */,
 				BA4427842447B07300CB7B16 /* HexagonParameters.swift in Sources */,
+				BA4427862447C63700CB7B16 /* BasePairingView.swift in Sources */,
 				BA4427822447B04400CB7B16 /* Badge.swift in Sources */,
+				BAA357242448F15700F615FE /* RNABasePair.swift in Sources */,
+				BAB395032448FB42001B4E16 /* RNAStrandView.swift in Sources */,
 				BA7F48A024365D0900C1B3F8 /* AppDelegate.swift in Sources */,
 				BA44277C24457F9300CB7B16 /* MotherView.swift in Sources */,
+				BAB3950524496671001B4E16 /* AboutView.swift in Sources */,
 				BA44277E2446327500CB7B16 /* LessonView.swift in Sources */,
 				BA4427802446A89F00CB7B16 /* ViewRouter.swift in Sources */,
 				BA7F48A224365D0900C1B3F8 /* SceneDelegate.swift in Sources */,
+				BA4427882447FCD000CB7B16 /* DNABasePair.swift in Sources */,
 				BA7F48A424365D0900C1B3F8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

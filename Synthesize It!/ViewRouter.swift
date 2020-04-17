@@ -13,7 +13,7 @@ class ViewRouter: ObservableObject {
     
     let objectWillChange = PassthroughSubject<ViewRouter,Never>()
     
-    var currentPage: String = "page1" {
+    var currentPage: String = "home" {
         didSet {
             objectWillChange.send(self)
         }

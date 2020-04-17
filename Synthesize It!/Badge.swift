@@ -11,7 +11,9 @@ import SwiftUI
 struct Badge: View {
     var startGradient: Color
     var endGradient: Color
+    var base: String
     var body: some View {
+        ZStack{
         GeometryReader { geometry in
             Path { path in
                 var width: CGFloat = min(geometry.size.width, geometry.size.height)
@@ -53,11 +55,17 @@ struct Badge: View {
             ))
             .aspectRatio(1, contentMode: .fit)
         }
+            Text("\(self.base)")
+                .foregroundColor(.white)
+                .font(.system(size: 150))
+                .font(.system(.largeTitle, design: .serif))
+                
+        }
     }
 }
 
 struct Badge_Previews: PreviewProvider {
     static var previews: some View {
-        Badge(startGradient: Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255), endGradient: Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255))
+        Badge(startGradient: Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255), endGradient: Color(red: 239.0 / 255, green: 172.0 / 255, blue: 120.0 / 255), base:"A")
     }
 }

@@ -9,10 +9,11 @@ import Foundation
 import SwiftUI
 
 struct LessonView : View{
+    @ObservedObject var viewRouter: ViewRouter
     @State private var index : Int?
     var wordBank: [String]
     var definitions: [String] = []
-    var pictures: [Image] = []
+    var pictures: [Image?] = []
    
     
     var body : some View{
@@ -34,29 +35,39 @@ struct LessonView : View{
                             HStack{
                             ForEach(0..<self.wordBank.count/2, id: \.self){x in
                                     Button(self.wordBank[x]){
-                                                                   
+                                        self.index = self.findIndex(name: self.wordBank[x])
                                                                }
                                                                .frame(maxWidth: g.size.width/1.5)
                                                                .font(.system(size: 20))
+                            
                                 }
                             }
                             HStack{
                             ForEach(self.wordBank.count/2..<self.wordBank.count, id: \.self){x in
                                 Button(self.wordBank[x]){
-                                                                                            }
+                                    self.index = self.findIndex(name: self.wordBank[x])                               }
                                                 .frame(maxWidth: g.size.width/1.5)
                                                 .font(.system(size: 20))
                                                            }
                                                        }
-                            if(self.index == nil){
-                                Text("What is \(self.wordBank[0])")
+                            if(self.index != nil){
+                                Text("What is \(self.wordBank[self.index!])")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding()
                                 
-                                Text("\(self.definitions[0])")
+                                Text("\(self.definitions[self.index!])")
+                                    .kerning(2)
+                                    .font(.callout)
+                                    .lineSpacing(7)
+                                    .padding()
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    
+                                    
                                 
-                                self.pictures[0].resizable()
-                                .frame(width:200, height: 200)
+                                if(self.pictures[self.index!] != nil){
+                                    self.pictures[self.index!]!
+                                }
                             }
                             Spacer()
                             }
@@ -65,11 +76,28 @@ struct LessonView : View{
                     
             }
             .navigationBarTitle("Transcription")
-            .navigationBarItems(trailing:
-                Button("Let's try it!"){
-                    
+            .navigationBarItems(
+                leading: Button("🏠"){
+                           self.viewRouter.currentPage = "home"
+                           }.padding(),
+                trailing: Button("Let's try it!"){
+                    self.viewRouter.currentPage = "page3"
                 }.padding())
+            
         }
+    }
+    func findIndex(name: String) -> Int?{
+        for x in 0..<wordBank.count{
+            if(wordBank[x] == name){
+                if(x == self.index){
+                    return nil
+                }
+                else{
+                    return x
+                }
+            }
+        }
+        return nil
     }
 }
 
@@ -77,6 +105,6 @@ struct LessonView : View{
 
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
-        LessonView(wordBank: ["DNA", "mRNA", "Introns", "Exons"],definitions: ["its the key to Nastassja's heart", "", "", ""],pictures: [Image("CookBook")])
+        LessonView( viewRouter: ViewRouter(), wordBank: ["DNA", "mRNA", "Introns", "Exons"],definitions: ["its the key to Nastassja's heart", "", "", ""],pictures: [Image("CookBook")])
     }
 }

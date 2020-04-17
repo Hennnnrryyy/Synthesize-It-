@@ -40,7 +40,7 @@ struct ContentView: View {
             VStack(alignment: .center, spacing: 75){
                 Divider()
                 Button("About!"){
-                    
+                    self.viewRouter.currentPage = "about"
                 }
                 .modifier(HomeButton())
                 
@@ -51,10 +51,11 @@ struct ContentView: View {
                 }
                 .modifier(HomeButton())
                 
-                Button("Translation"){
+                Button("Translation 🔒"){
                     
                 }
                 .modifier(HomeButton())
+                .opacity(0.5)
                 
                 Image("CookBook").resizable()
                     .frame(width:200, height: 200)
